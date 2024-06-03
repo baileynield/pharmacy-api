@@ -32,8 +32,7 @@ async def update_patients(first_name: str, updated_patient: Patient) -> None:
         if patient.first_name == first_name:
             patients[i] = updated_patient
             return
-        else:
-            patients.append(updated_patient)
+    patients.append(updated_patient)
 
 @app.delete("/patients/{first_name}")
 async def delete_patients(first_name: str) -> None:
